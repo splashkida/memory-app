@@ -34,9 +34,16 @@ ActiveRecord::Schema.define(version: 2021_02_01_122505) do
   end
 
   create_table "memories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "text"
-    t.text "imageハスわんアタッチド？"
+    t.integer "year"
+    t.integer "month"
+    t.integer "day"
+    t.string "place"
+    t.integer "weather_id"
+    t.integer "access_id"
+    t.integer "scene_id"
+    t.integer "price_id"
+    t.string "with_who"
+    t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

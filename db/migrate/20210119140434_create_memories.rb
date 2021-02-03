@@ -5,10 +5,10 @@ class CreateMemories < ActiveRecord::Migration[6.0]
       t.integer :month
       t.integer :day
       t.string  :place
-      t.integer :weather
-      t.integer :access
-      t.integer :scene
-      t.integer :price
+      t.integer :weather_id
+      t.integer :access_id
+      t.integer :scene_id
+      t.integer :price_id
       t.string  :with_who
       t.string  :comment
       t.timestamps
