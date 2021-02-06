@@ -11,6 +11,7 @@ class CreateMemories < ActiveRecord::Migration[6.0]
       t.integer :price_id
       t.string  :with_who
       t.string  :comment
+      t.references :user,                 null: false, foreign_key: true
       t.timestamps
     end
   end
