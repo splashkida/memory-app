@@ -1,0 +1,55 @@
+
+<div class="memory">
+  <div class="upper-message">
+    <div class="memory-user">
+      <!-- 投稿したユーザー名情報を出力する -->
+      <p><%= @nickname %>さんの投稿一覧</p>
+      <% @memories.each do |memory| %>
+
+
+  <div class="lower-message">
+    <div class="memory-content">
+      <!-- 投稿した思い出内容を記述する -->
+      <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-memory">年月日</th>
+          <td class="detail-value"><%= memory.year %>/<%= memory.month %>/<%= memory.day %></td>
+        </tr>
+        <tr>
+          <th class="detail-memory">場所</th>
+          <td class="detail-value"><%= memory.place %></td>
+        </tr>
+        <tr>
+          <th class="detail-memory">天気</th>
+          <td class="detail-value"><%= memory.weather.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-memory">交通手段</th>
+          <td class="detail-value"><%= memory.access.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-memory">シーン</th>
+          <td class="detail-value"><%= memory.scene.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-memory">予算</th>
+          <td class="detail-value"><%= memory.price.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-memory">誰と一緒に？</th>
+          <td class="detail-value"><%= memory.with_who %></td>
+        </tr>
+    </div>
+    <%#= image_tag memory.image, class: 'memory-image' if memory.image.attached? %>
+    <div class="content_post" style="background-image: url(<%= memory.image %>);">
+       <tr>
+          <th class="detail-memory">コメント</th>
+          <td class="detail-value"><%= memory.comment %></td>
+        </tr>
+    <% end %>
+  </div>
+    
+    </div>
+  </div>
+</div>

@@ -7,6 +7,10 @@ class MemoriesController < ApplicationController
     @memory = Memory.order("created_at DESC")
   end
 
+  def show
+    @memory = Memory.order("created_at DESC")
+  end
+
   def create
     @memory = Memory.new(memory_params)
     if @memory.valid?
