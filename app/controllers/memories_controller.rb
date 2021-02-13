@@ -22,8 +22,7 @@ class MemoriesController < ApplicationController
   end
 
   private
-
   def memory_params
-    params.require(:memory).permit(:image,:year, :month, :day, :place, :access_id, :scene_id, :price_id, :weather_id, :with_who, :comment).merge(user_id: current_user.id)
+    params.require(:memory).permit(:image, :year, :month, :day, :place, :weather_id, :access_id, :scene_id, :price_id, :with_who, :comment).merge(user_id: current_user.id)
   end
 end
