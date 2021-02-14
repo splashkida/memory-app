@@ -7,7 +7,7 @@
     <td>
     <br>
     <li>
-      <%= image_tag result.image, class: 'memory-image' if result.image.attached? %>
+      <%= image_tag result.image.variant(resize: '500x500'), class: 'memory-image' if result.image.attached? %>
       <br>
       <%= result.image %>
       <br>
