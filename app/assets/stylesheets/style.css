@@ -1057,3 +1057,19 @@ footer p {
 .search-form .search-btn {
   width: 10%;
 }
+
+.weather {
+  display: flex;
+}
+
+.access {
+  display: flex;
+}
+
+.scene {
+  display: flex;
+}
+
+.price {
+  display: flex;
+}
