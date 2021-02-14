@@ -1,4 +1,5 @@
 class MemoriesController < ApplicationController
+  before_action :authenticate_user!, except: [:search, :show, :index]
   before_action :search_memory, only: [:index, :search]
 
   def new

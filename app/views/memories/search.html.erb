@@ -1,3 +1,4 @@
+<div class="memory">
 <h1>
   検索結果
 </h1>
@@ -7,7 +8,7 @@
     <td>
     <br>
     <li>
-      <%= image_tag result.image, class: 'memory-image' if result.image.attached? %>
+      <%= image_tag result.image.variant(resize: '500x500'), class: 'memory-image' if result.image.attached? %>
       <br>
       <%= result.image %>
       <br>
@@ -33,3 +34,4 @@
 <% end %>
 <br>
 <%= link_to 'トップページへ戻る', root_path %>
+</div>
